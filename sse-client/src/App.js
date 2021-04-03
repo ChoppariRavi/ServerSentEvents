@@ -10,9 +10,13 @@ function App() {
       const events = new EventSource("http://localhost:3001/events");
 
       events.onmessage = (event) => {
+        console.log("[(e.lastEventId]]", event);
         const parsedData = JSON.parse(event.data);
-
-        setFacts((facts) => facts.concat(parsedData));
+        if (parsedData.length > 5) {
+          events.close();
+        } else {
+          setFacts((facts) => facts.concat(parsedData));
+        }
       };
 
       setListening(true);
