@@ -13,7 +13,7 @@ The EventSource interface is web content's interface to server-sent events. An E
 **npm start**
 
 
-**curl -X POST \**<br/>
-** -H "Content-Type: application/json" \**<br/>
-** -d '{"info": "Shark teeth are embedded in the gums rather than directly affixed to the jaw, and are constantly replaced throughout life.", "source": "https://en.wikipedia.org/wiki/Shark"}'\**<br/>
-** -s http://localhost:3001/fact**
+```curl -X POST \
+ -H "Content-Type: application/json" \
+ -d '{"info": "Shark teeth are embedded in the gums rather than directly affixed to the jaw, and are constantly replaced throughout life.", "source": "https://en.wikipedia.org/wiki/Shark"}'\
+ -s http://localhost:3001/fact```
